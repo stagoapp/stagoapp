@@ -1,4 +1,4 @@
-namespace WebAPI.API.Models
+namespace WebAPI.Models
 {
     public class Value
     {
