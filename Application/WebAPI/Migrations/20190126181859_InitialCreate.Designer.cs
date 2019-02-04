@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using WebAPI.Data;
+using WebAPI.Data.Models;
 
 namespace WebAPI.Migrations
 {
@@ -21,7 +21,7 @@ namespace WebAPI.Migrations
                 .HasAnnotation("ProductVersion", "2.2.1-servicing-10028")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
-            modelBuilder.Entity("WebAPI.Models.Message", b =>
+            modelBuilder.Entity("WebAPI.Data.Models.Message", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -51,7 +51,7 @@ namespace WebAPI.Migrations
                     b.ToTable("Messages");
                 });
 
-            modelBuilder.Entity("WebAPI.Models.Photo", b =>
+            modelBuilder.Entity("WebAPI.Data.Models.Photo", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -75,7 +75,7 @@ namespace WebAPI.Migrations
                     b.ToTable("Photos");
                 });
 
-            modelBuilder.Entity("WebAPI.Models.User", b =>
+            modelBuilder.Entity("WebAPI.Data.Models.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -111,7 +111,7 @@ namespace WebAPI.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("WebAPI.Models.Value", b =>
+            modelBuilder.Entity("WebAPI.Data.Models.Value", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -123,22 +123,22 @@ namespace WebAPI.Migrations
                     b.ToTable("Values");
                 });
 
-            modelBuilder.Entity("WebAPI.Models.Message", b =>
+            modelBuilder.Entity("WebAPI.Data.Models.Message", b =>
                 {
-                    b.HasOne("WebAPI.Models.User", "Recipient")
+                    b.HasOne("WebAPI.Data.Models.User", "Recipient")
                         .WithMany("MessagesReceived")
                         .HasForeignKey("RecipientId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("WebAPI.Models.User", "Sender")
+                    b.HasOne("WebAPI.Data.Models.User", "Sender")
                         .WithMany("MessagesSent")
                         .HasForeignKey("SenderId")
                         .OnDelete(DeleteBehavior.Restrict);
                 });
 
-            modelBuilder.Entity("WebAPI.Models.Photo", b =>
+            modelBuilder.Entity("WebAPI.Data.Models.Photo", b =>
                 {
-                    b.HasOne("WebAPI.Models.User", "User")
+                    b.HasOne("WebAPI.Data.Models.User", "User")
                         .WithMany("Photos")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);

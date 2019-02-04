@@ -1,7 +1,7 @@
 namespace WebAPI.Data.Models
 {
-    public class Order
+    public class Order : Entity
     {
-        public int Id { get; set; }
+        
     }
 }

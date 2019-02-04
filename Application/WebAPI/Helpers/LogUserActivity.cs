@@ -1,7 +1,6 @@
 using System;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using WebAPI.Data;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -15,10 +14,10 @@ namespace WebAPI.Helpers
 
             var userId = int.Parse(resultContext.HttpContext.User
                 .FindFirst(ClaimTypes.NameIdentifier).Value);
-            var repo = resultContext.HttpContext.RequestServices.GetService<IOrderRepository>();
-            var user = await repo.GetUser(userId);
-            user.LastActive = DateTime.Now;
-            await repo.SaveAll();
+            // var repo = resultContext.HttpContext.RequestServices.GetService<IUserRepository>();
+            // var user = await repo.GetUser(userId);
+            // user.LastActive = DateTime.Now;
+            // await repo.SaveAll();
         }
     }
 }

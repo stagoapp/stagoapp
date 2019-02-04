@@ -1,9 +1,9 @@
 using System.Linq;
 using AutoMapper;
-using WebAPI.Dtos;
-using WebAPI.Models;
-using WebAPI.Dtos;
-using WebAPI.Models;
+using WebAPI.Data.Dtos;
+using WebAPI.Data.Models;
+using WebAPI.Data.Dtos;
+using WebAPI.Data.Models;
 
 namespace WebAPI.Helpers
 {

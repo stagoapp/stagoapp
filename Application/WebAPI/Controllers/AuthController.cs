@@ -3,12 +3,12 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using WebAPI.Data;
-using WebAPI.Dtos;
-using WebAPI.Models;
+using WebAPI.Data.Dtos;
+using WebAPI.Data.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using WebAPI.Data.Repositories;
 
 namespace WebAPI.Controllers
 {

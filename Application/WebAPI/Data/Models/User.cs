@@ -1,12 +1,11 @@
 using System;
 using System.Collections.Generic;
-using WebAPI.Models;
+using WebAPI.Data.Models;
 
-namespace WebAPI.Models
+namespace WebAPI.Data.Models
 {
-    public class User
+    public class User: Entity
     {
-        public int Id { get; set; }
         public string Username { get; set; }
         public byte[] PasswordHash { get; set; }
         public byte[] PasswordSalt { get; set; }

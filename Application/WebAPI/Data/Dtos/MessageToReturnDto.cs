@@ -1,6 +1,6 @@
 using System;
 
-namespace WebAPI.Dtos
+namespace WebAPI.Data.Dtos
 {
     public class MessageToReturnDto
     {

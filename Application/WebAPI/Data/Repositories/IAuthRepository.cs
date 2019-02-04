@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
-using WebAPI.Models;
+using WebAPI.Data.Models;
 
-namespace WebAPI.Data
+namespace WebAPI.Data.Repositories
 {
     public interface IAuthRepository
     {

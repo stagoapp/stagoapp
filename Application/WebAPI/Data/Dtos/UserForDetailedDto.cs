@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using WebAPI.Models;
+using WebAPI.Data.Models;
 
-namespace WebAPI.Dtos
+namespace WebAPI.Data.Dtos
 {
     public class UserForDetailedDto
     {
