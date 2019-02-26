@@ -49,9 +49,9 @@ namespace WebAPI
         services.AddCors();
             services.Configure<CloudinarySettings>(Configuration.GetSection("CloudinarySettings"));
             services.AddAutoMapper();
-            // services.AddTransient<Seed>();
+            services.AddTransient<Seed>();
             services.AddScoped<IAuthRepository, AuthRepository>();
-            // services.AddScoped<IRepository, Repository>();
+            // services.AddScoped<IRepository, Repository>()
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options => {
                     options.TokenValidationParameters = new TokenValidationParameters
@@ -77,7 +77,7 @@ namespace WebAPI
             services.AddCors();
             services.Configure<CloudinarySettings>(Configuration.GetSection("CloudinarySettings"));
             services.AddAutoMapper();
-            // services.AddTransient<Seed>();
+            services.AddTransient<Seed>();
             services.AddScoped<IAuthRepository, AuthRepository>();
             // services.AddScoped<IRepository, Repository>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
