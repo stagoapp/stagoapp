@@ -1,7 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Http;
 
-namespace WebAPI.Dtos
+namespace WebAPI.Data.Dtos
 {
     public class PhotoForCreationDto
     {

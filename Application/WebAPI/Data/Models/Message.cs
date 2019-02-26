@@ -1,11 +1,10 @@
 using System;
-using WebAPI.Models;
+using WebAPI.Data.Models;
 
-namespace WebAPI.Models
+namespace WebAPI.Data.Models
 {
-    public class Message
+    public class Message : Entity
     {
-        public int Id { get; set; }
         public int SenderId { get; set; }
         public User Sender { get; set; }
         public int RecipientId { get; set; }

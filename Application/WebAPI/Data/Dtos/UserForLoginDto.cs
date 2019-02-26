@@ -1,4 +1,4 @@
-namespace WebAPI.Dtos
+namespace WebAPI.Data.Dtos
 {
     public class UserForLoginDto
     {

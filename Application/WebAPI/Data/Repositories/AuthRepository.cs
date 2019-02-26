@@ -1,9 +1,9 @@
 using System;
 using System.Threading.Tasks;
-using WebAPI.Models;
+using WebAPI.Data.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace WebAPI.Data
+namespace WebAPI.Data.Repositories
 {
     public class AuthRepository : IAuthRepository
     {

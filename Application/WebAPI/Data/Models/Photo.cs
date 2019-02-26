@@ -1,11 +1,10 @@
 using System;
-using WebAPI.Models;
+using WebAPI.Data.Models;
 
-namespace WebAPI.Models
+namespace WebAPI.Data.Models
 {
-    public class Photo
+    public class Photo : Entity
     {
-        public int Id { get; set; }
         public string Url { get; set; }
         public string Description { get; set; }
         public DateTime DateAdded { get; set; }

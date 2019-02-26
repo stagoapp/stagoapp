@@ -1,11 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
-using WebAPI.Models;
+using WebAPI.Data.Models;
 using Newtonsoft.Json;
-using WebAPI.Data;
-using WebAPI.Models;
 
-namespace WebAPI.Data
+namespace WebAPI.Data.Models
 {
     public class Seed
     {

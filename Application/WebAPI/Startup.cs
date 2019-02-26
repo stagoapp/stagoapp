@@ -19,7 +19,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using WebAPI.Data;
+using WebAPI.Data.Models;
+using WebAPI.Data.Repositories;
 using WebAPI.Helpers;
 
 namespace WebAPI
@@ -50,7 +51,7 @@ namespace WebAPI
             services.AddAutoMapper();
             services.AddTransient<Seed>();
             services.AddScoped<IAuthRepository, AuthRepository>();
-            services.AddScoped<IOrderRepository, OrderRepository>();
+            // services.AddScoped<IRepository, Repository>()
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options => {
                     options.TokenValidationParameters = new TokenValidationParameters
@@ -78,7 +79,7 @@ namespace WebAPI
             services.AddAutoMapper();
             services.AddTransient<Seed>();
             services.AddScoped<IAuthRepository, AuthRepository>();
-            services.AddScoped<IOrderRepository, OrderRepository>();
+            // services.AddScoped<IRepository, Repository>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options => {
                     options.TokenValidationParameters = new TokenValidationParameters
