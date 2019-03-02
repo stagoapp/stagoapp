@@ -12252,11 +12252,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Behrouz\\Projects\\StagoApp\\Application\\repos\\stagoapp\\Application\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "d:\\Behrouz\\Projects\\StagoApp\\Applications\\StagoApp\\repos\\stagoapp\\Application\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "d:\\Behrouz\\Projects\\StagoApp\\Application\\repos\\stagoapp\\Application\\WebAPI\\WebAPI.csproj",
+      "projectPath": "d:\\Behrouz\\Projects\\StagoApp\\Applications\\StagoApp\\repos\\stagoapp\\Application\\WebAPI\\WebAPI.csproj",
       "packagesPath": "C:\\Users\\Behrouz\\.nuget\\packages\\",
-      "outputPath": "d:\\Behrouz\\Projects\\StagoApp\\Application\\repos\\stagoapp\\Application\\WebAPI\\obj\\",
+      "outputPath": "d:\\Behrouz\\Projects\\StagoApp\\Applications\\StagoApp\\repos\\stagoapp\\Application\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

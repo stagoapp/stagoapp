@@ -12,3 +12,17 @@ D:\Behrouz\Projects\StagoApp\Application\repos\stagoapp\Application\WebAPI\obj\D
 D:\Behrouz\Projects\StagoApp\Application\repos\stagoapp\Application\WebAPI\obj\Debug\netcoreapp2.2\WebAPI.RazorTargetAssemblyInfo.cache
 D:\Behrouz\Projects\StagoApp\Application\repos\stagoapp\Application\WebAPI\obj\Debug\netcoreapp2.2\WebAPI.dll
 D:\Behrouz\Projects\StagoApp\Application\repos\stagoapp\Application\WebAPI\obj\Debug\netcoreapp2.2\WebAPI.pdb
+d:\Behrouz\Projects\StagoApp\Applications\StagoApp\repos\stagoapp\Application\WebAPI\bin\Debug\netcoreapp2.2\WebAPI.deps.json
+d:\Behrouz\Projects\StagoApp\Applications\StagoApp\repos\stagoapp\Application\WebAPI\bin\Debug\netcoreapp2.2\WebAPI.runtimeconfig.json
+d:\Behrouz\Projects\StagoApp\Applications\StagoApp\repos\stagoapp\Application\WebAPI\bin\Debug\netcoreapp2.2\WebAPI.runtimeconfig.dev.json
+d:\Behrouz\Projects\StagoApp\Applications\StagoApp\repos\stagoapp\Application\WebAPI\bin\Debug\netcoreapp2.2\WebAPI.dll
+d:\Behrouz\Projects\StagoApp\Applications\StagoApp\repos\stagoapp\Application\WebAPI\bin\Debug\netcoreapp2.2\WebAPI.pdb
+d:\Behrouz\Projects\StagoApp\Applications\StagoApp\repos\stagoapp\Application\WebAPI\obj\Debug\netcoreapp2.2\WebAPI.csprojAssemblyReference.cache
+d:\Behrouz\Projects\StagoApp\Applications\StagoApp\repos\stagoapp\Application\WebAPI\obj\Debug\netcoreapp2.2\WebAPI.csproj.CoreCompileInputs.cache
+d:\Behrouz\Projects\StagoApp\Applications\StagoApp\repos\stagoapp\Application\WebAPI\obj\Debug\netcoreapp2.2\WebAPI.RazorAssemblyInfo.cache
+d:\Behrouz\Projects\StagoApp\Applications\StagoApp\repos\stagoapp\Application\WebAPI\obj\Debug\netcoreapp2.2\WebAPI.RazorAssemblyInfo.cs
+d:\Behrouz\Projects\StagoApp\Applications\StagoApp\repos\stagoapp\Application\WebAPI\obj\Debug\netcoreapp2.2\WebAPI.AssemblyInfoInputs.cache
+d:\Behrouz\Projects\StagoApp\Applications\StagoApp\repos\stagoapp\Application\WebAPI\obj\Debug\netcoreapp2.2\WebAPI.AssemblyInfo.cs
+d:\Behrouz\Projects\StagoApp\Applications\StagoApp\repos\stagoapp\Application\WebAPI\obj\Debug\netcoreapp2.2\WebAPI.RazorTargetAssemblyInfo.cache
+d:\Behrouz\Projects\StagoApp\Applications\StagoApp\repos\stagoapp\Application\WebAPI\obj\Debug\netcoreapp2.2\WebAPI.dll
+d:\Behrouz\Projects\StagoApp\Applications\StagoApp\repos\stagoapp\Application\WebAPI\obj\Debug\netcoreapp2.2\WebAPI.pdb
