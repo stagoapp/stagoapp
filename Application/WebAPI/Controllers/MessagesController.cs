@@ -108,14 +108,14 @@ namespace WebAPI.Controllers
 
             var messageFromRepo = await _repo.Get(id);
 
-            if (messageFromRepo.SenderId == userId)
-                messageFromRepo.SenderDeleted = true;
+            // if (messageFromRepo.UserSending_Id == userId)
+            //     messageFromRepo.SenderDeleted = true;
 
-            if (messageFromRepo.RecipientId == userId)
-                messageFromRepo.RecipientDeleted = true;
+            // if (messageFromRepo.UserReceiving_Id == userId)
+            //     messageFromRepo.RecipientDeleted = true;
 
-            if (messageFromRepo.SenderDeleted && messageFromRepo.RecipientDeleted)
-                _repo.Delete(messageFromRepo);
+            // if (messageFromRepo.SenderDeleted && messageFromRepo.RecipientDeleted)
+            //     _repo.Delete(messageFromRepo);
             
             // if (await _repo.Update())
             //     return NoContent();
@@ -131,7 +131,7 @@ namespace WebAPI.Controllers
 
             var message = await _repo.Get(id);
 
-            if (message.RecipientId != userId)
+            if (message.UserReceiving_Id != userId)
                 return Unauthorized();
 
             message.IsRead = true;
