@@ -12,10 +12,11 @@ import {TimeAgoPipe} from 'time-ago-pipe';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AuthGuard } from './guards/auth.guard';
 import { AuthService } from './services/auth.service';
 import { AlertifyService } from './services/alertify.service';
 import { ErrorInterceptorProvider } from './services/error.interceptor';
-import { AuthGuard } from './guards/auth.guard';
+import { UserService } from './services/user.service';
 
 import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
@@ -24,7 +25,6 @@ import { MemberListComponent } from './components/members/member-list/member-lis
 import { ListsComponent } from './components/lists/lists.component';
 import { MessagesComponent } from './components/messages/messages.component';
 
-import { UserService } from './services/user.service';
 import { MemberCardComponent } from './components/members/member-card/member-card.component';
 import { MemberDetailComponent } from './components/members/member-detail/member-detail.component';
 import { MemberDetailResolver } from './resolvers/member-detail.resolver';

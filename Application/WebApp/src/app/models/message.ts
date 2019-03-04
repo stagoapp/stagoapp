@@ -1,5 +1,6 @@
-export interface Message {
-  id: number;
+import { Entity } from './Entity';
+
+export interface Message  extends Entity {
   senderId: number;
   senderKnownAs: string;
   senderPhotoUrl: string;

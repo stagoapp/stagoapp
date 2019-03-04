@@ -1,7 +1,7 @@
 import { Photo } from './photo';
+import { Entity } from './Entity';
 
-export interface User {
-  id: number;
+export interface User extends Entity {
   username: string;
   knownAs: string;
   age: number;

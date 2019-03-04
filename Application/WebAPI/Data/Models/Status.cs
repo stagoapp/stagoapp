@@ -1,6 +1,6 @@
 namespace WebAPI.Data.Models
 {
-    public class Status
+    public class Status : TypeModel
     {
         
     }

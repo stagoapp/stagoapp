@@ -1,5 +1,6 @@
-export interface Photo {
-    id: number;
+import { Entity } from './Entity';
+
+export interface Photo  extends Entity {
     url: string;
     description: string;
     dateAdded: Date;
