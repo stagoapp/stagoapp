@@ -19,9 +19,9 @@ namespace WebAPI.Controllers
     public class MessagesController : ControllerBase
     {
         // private readonly IOrderRepository _repo;
-        private readonly IRepository<Message> _repo;
+        private readonly IEntityRepository<Message> _repo;
         private readonly IMapper _mapper;
-        public MessagesController(IRepository<Message> repo, IMapper mapper)
+        public MessagesController(IEntityRepository<Message> repo, IMapper mapper)
         {
             _mapper = mapper;
             _repo = repo;

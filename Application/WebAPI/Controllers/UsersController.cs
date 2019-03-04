@@ -18,10 +18,10 @@ namespace WebAPI.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private readonly IRepository<User> _repo;
+        private readonly IEntityRepository<User> _repo;
         private readonly IMapper _mapper;
 
-        public UsersController(IRepository<User> repo, IMapper mapper)
+        public UsersController(IEntityRepository<User> repo, IMapper mapper)
         {
             _mapper = mapper;
             _repo = repo;

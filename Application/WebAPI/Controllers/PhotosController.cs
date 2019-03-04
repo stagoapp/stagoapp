@@ -19,12 +19,12 @@ namespace WebAPI.Controllers
     [ApiController]
     public class PhotosController : ControllerBase
     {
-        private readonly IRepository<Photo> _repo;
+        private readonly IEntityRepository<Photo> _repo;
         private readonly IMapper _mapper;
         private readonly IOptions<CloudinarySettings> _cloudinaryConfig;
         private Cloudinary _cloudinary;
 
-        public PhotosController(IRepository<Photo> repo, IMapper mapper,
+        public PhotosController(IEntityRepository<Photo> repo, IMapper mapper,
             IOptions<CloudinarySettings> cloudinaryConfig)
         {
             _cloudinaryConfig = cloudinaryConfig;
