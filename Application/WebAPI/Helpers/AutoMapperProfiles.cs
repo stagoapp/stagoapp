@@ -11,27 +11,30 @@ namespace WebAPI.Helpers
     {
         public AutoMapperProfiles()
         {
-            CreateMap<User, UserForListDto>();
+            CreateMap<Entity, Dto>();
+            CreateMap<Dto, Entity>();
+            CreateMap<User, UserListDto>();
+            CreateMap<User, UserListDto>();
                 // .ForMember(dest => dest.PhotoUrl, opt => {
                 //     opt.MapFrom(src => src.Photos.FirstOrDefault(p => p.IsMain).Url);
                 // });
                 // .ForMember(dest => dest.Age, opt => {
                 //     opt.ResolveUsing(d => d.DateOfBirth.CalculateAge());
                 // });
-            CreateMap<User, UserForDetailedDto>();
+            CreateMap<User, UserDetailsDto>();
                 // .ForMember(dest => dest.PhotoUrl, opt => {
                 //     opt.MapFrom(src => src.Photos.FirstOrDefault(p => p.IsMain).Url);
                 // });
                 // .ForMember(dest => dest.Age, opt => {
                 //     opt.ResolveUsing(d => d.DateOfBirth.CalculateAge());
                 // });
-            CreateMap<Photo, PhotosForDetailedDto>();
+            CreateMap<Photo, PhotosDetailsDto>();
             CreateMap<UserForUpdateDto, User>();
-            CreateMap<Photo, PhotoForReturnDto>();
-            CreateMap<PhotoForCreationDto, Photo>();
+            CreateMap<Photo, PhotoReturnDto>();
+            CreateMap<PhotoCreationDto, Photo>();
             CreateMap<UserForRegisterDto, User>();
-            CreateMap<MessageForCreationDto, Message>().ReverseMap();
-            CreateMap<Message, MessageToReturnDto>();
+            CreateMap<MessageCreationDto, Message>().ReverseMap();
+            CreateMap<Message, MessageReturnDto>();
                 // .ForMember(m => m.SenderPhotoUrl, opt => opt
                 //     .MapFrom(u => u.Sender.Photos.FirstOrDefault(p => p.IsMain).Url))
                 // .ForMember(m => m.RecipientPhotoUrl, opt => opt

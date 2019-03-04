@@ -73,7 +73,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateMessage(int userId, MessageForCreationDto messageForCreationDto)
+        public async Task<IActionResult> CreateMessage(int userId, MessageCreationDto messageForCreationDto)
         {
             var sender = await _repo.Get(userId);
 

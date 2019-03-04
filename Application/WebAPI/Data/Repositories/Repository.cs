@@ -39,6 +39,7 @@ namespace WebAPI.Data.Repositories
         public void Add(T entity)
         {
             _unitOfWork.Context.Set<T>().Add(entity);
+            Save();
         }
 
         public void Add(IEnumerable<T> entities)
@@ -47,12 +48,14 @@ namespace WebAPI.Data.Repositories
             {
                 _unitOfWork.Context.Set<T>().Add(entity);
             }
+            Save();
         }
 
         public void Update(T entity)
         {
             _unitOfWork.Context.Entry(entity).State = EntityState.Modified;
             _unitOfWork.Context.Set<T>().Attach(entity);
+            Save();
         }
 
         public void Update(IEnumerable<T> entities)
@@ -61,6 +64,7 @@ namespace WebAPI.Data.Repositories
             {
                 _unitOfWork.Context.Entry(entity).State = EntityState.Modified;
                 _unitOfWork.Context.Set<T>().Attach(entity);
+                Save();
             }
         }
 
@@ -68,12 +72,14 @@ namespace WebAPI.Data.Repositories
         {
             T existing = _unitOfWork.Context.Set<T>().Find(entity);
             if (existing != null) _unitOfWork.Context.Set<T>().Remove(existing);
+            Save();
         }
 
         public void Delete(int id)
         {
             T existing = _unitOfWork.Context.Set<T>().Where(t => t.Id == id).FirstOrDefault();
             if (existing != null) _unitOfWork.Context.Set<T>().Remove(existing);
+            Save();
         }
 
         public void Delete(IEnumerable<T> entities)
@@ -83,6 +89,7 @@ namespace WebAPI.Data.Repositories
                 T existing = _unitOfWork.Context.Set<T>().Find(entity);
                 if (existing != null) _unitOfWork.Context.Set<T>().Remove(existing);
             }
+            Save();
         }
 
         public void Save()

@@ -43,7 +43,7 @@ namespace WebAPI.Controllers
 
             var users = await _repo.Get();
 
-            var usersToReturn = _mapper.Map<IEnumerable<UserForListDto>>(users);
+            var usersToReturn = _mapper.Map<IEnumerable<UserListDto>>(users);
 
             // Response.AddPagination(users.CurrentPage, users.PageSize, users.TotalCount, users.TotalPages);
 
@@ -55,7 +55,7 @@ namespace WebAPI.Controllers
         {
             var user = await _repo.Get(id);
 
-            var userToReturn = _mapper.Map<UserForDetailedDto>(user);
+            var userToReturn = _mapper.Map<UserDetailsDto>(user);
 
             return Ok(userToReturn);
         }

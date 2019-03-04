@@ -2,7 +2,7 @@ using System;
 
 namespace WebAPI.Data.Dtos
 {
-    public class MessageToReturnDto
+    public class MessageReturnDto
     {
         public int Id { get; set; }
         public int SenderId { get; set; }

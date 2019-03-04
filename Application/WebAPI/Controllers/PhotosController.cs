@@ -31,13 +31,13 @@ namespace WebAPI.Controllers
             _mapper = mapper;
             _repo = repo;
 
-            Account acc = new Account(
-                _cloudinaryConfig.Value.CloudName,
-                _cloudinaryConfig.Value.ApiKey,
-                _cloudinaryConfig.Value.ApiSecret
-            );
+            // Account acc = new Account(
+            //     _cloudinaryConfig.Value.CloudName,
+            //     _cloudinaryConfig.Value.ApiKey,
+            //     _cloudinaryConfig.Value.ApiSecret
+            // );
 
-            _cloudinary = new Cloudinary(acc);
+            // _cloudinary = new Cloudinary(acc);
         }
 
         [HttpGet("{id}", Name = "GetPhoto")]
@@ -45,14 +45,14 @@ namespace WebAPI.Controllers
         {
             var photoFromRepo = await _repo.Get(id);
 
-            var photo = _mapper.Map<PhotoForReturnDto>(photoFromRepo);
+            var photo = _mapper.Map<PhotoReturnDto>(photoFromRepo);
 
             return Ok(photo);
         }
 
         [HttpPost]
         public async Task<IActionResult> AddPhotoForUser(int userId,
-            [FromForm]PhotoForCreationDto photoForCreationDto)
+            [FromForm]PhotoCreationDto photoForCreationDto)
         {
             if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
                 return Unauthorized();

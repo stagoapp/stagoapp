@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace WebAPI.Data.Dtos
 {
-    public class PhotoForCreationDto
+    public class PhotoCreationDto
     {
         public string Url { get; set; }
         public IFormFile File { get; set; }
@@ -11,7 +11,7 @@ namespace WebAPI.Data.Dtos
         public DateTime DateAdded { get; set; }
         public string PublicId { get; set; }
 
-        public PhotoForCreationDto()
+        public PhotoCreationDto()
         {
             DateAdded = DateTime.Now;
         }
