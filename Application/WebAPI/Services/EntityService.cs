@@ -13,14 +13,14 @@ using AutoMapper;
 
 namespace WebAPI.Services
 {
-    public class Service<T, D> : IService<T, D>
+    public class EntityService<T, D> : IEntityService<T, D>
         where T : Entity
         where D : Dto
     {
-        private readonly IRepository<T> _repo;
+        private readonly IEntityRepository<T> _repo;
         private readonly IMapper _mapper;
 
-        public Service(IRepository<T> repo, IMapper mapper)
+        public EntityService(IEntityRepository<T> repo, IMapper mapper)
         {
             _repo = repo;
             _mapper = mapper;

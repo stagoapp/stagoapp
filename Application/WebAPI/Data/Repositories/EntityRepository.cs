@@ -11,12 +11,12 @@ using Microsoft.EntityFrameworkCore.Query;
 
 namespace WebAPI.Data.Repositories
 {
-    public class Repository<T> : IRepository<T> where T : Entity
+    public class EntityRepository<T> : IEntityRepository<T> where T : Entity
     {
 
         private readonly IUnitOfWork _unitOfWork;
 
-        public Repository(IUnitOfWork unitOfWork)
+        public EntityRepository(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }

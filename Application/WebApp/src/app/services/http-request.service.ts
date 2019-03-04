@@ -8,7 +8,7 @@ import { Serializer } from '../models/serializer';
 @Injectable({
   providedIn: 'root'
 })
-export class ServiceService<T extends Entity> {
+export class HttpRequestService<T extends Entity> {
 
   private url: string;
   private serializer: Serializer;
@@ -76,4 +76,5 @@ export class ServiceService<T extends Entity> {
   private convertData(data: any): T[] {
     return data.map(item => this.serializer.fromJson(item));
   }
+
 }

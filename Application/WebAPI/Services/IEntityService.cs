@@ -10,7 +10,7 @@ using WebAPI.Data.Dtos;
 
 namespace WebAPI.Services
 {
-    public interface IService<T, D> 
+    public interface IEntityService<T, D> 
         where T : Entity
         where D : Dto
     {
