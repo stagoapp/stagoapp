@@ -16,7 +16,7 @@ namespace WebAPI.Controllers
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class UsersController : ControllerBase
+    public class UsersController : EntityController<User, UserDto>
     {
         private readonly IEntityRepository<User> _repo;
         private readonly IMapper _mapper;

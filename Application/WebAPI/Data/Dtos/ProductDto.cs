@@ -2,16 +2,16 @@ using System;
 using System.Collections.Generic;
 using WebAPI.Data.Models;
 
-namespace WebAPI.Data.Models
+namespace WebAPI.Data.Dtos
 {
-    public class Product : Entity
+    public class ProductDto : Dto
     {
-        public int ProductType_Id { get; set;}
-        public int User_Id { get; set; } 
-        public int Status_Id { get; set; } 
-        public int Check_Id { get; set; }         
+        public ProductType ProductType{ get; set;}
+        public User User { get; set; } 
+        public Status Status { get; set; } 
+        public Check Check { get; set; }         
         public int Stock { get; set;}
-        public Guid PublicId { get; set;}         
+        public Guid PublicId { get; set;}
         public string Name { get; set;}
         public string Description { get; set;}
         public string Dimensions { get; set;}

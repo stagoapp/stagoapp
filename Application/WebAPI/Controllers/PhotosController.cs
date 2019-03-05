@@ -17,7 +17,7 @@ namespace WebAPI.Controllers
     [Authorize]
     [Route("api/users/{userId}/photos")]
     [ApiController]
-    public class PhotosController : ControllerBase
+    public class PhotosController : EntityController<Photo, PhotoDto>
     {
         private readonly IEntityRepository<Photo> _repo;
         private readonly IMapper _mapper;

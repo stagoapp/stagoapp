@@ -13,6 +13,7 @@ namespace WebAPI.Helpers
         {
             CreateMap<Entity, Dto>();
             CreateMap<Dto, Entity>();
+
             CreateMap<User, UserListDto>();
             CreateMap<User, UserListDto>();
                 // .ForMember(dest => dest.PhotoUrl, opt => {
@@ -28,10 +29,16 @@ namespace WebAPI.Helpers
                 // .ForMember(dest => dest.Age, opt => {
                 //     opt.ResolveUsing(d => d.DateOfBirth.CalculateAge());
                 // });
-            CreateMap<Photo, PhotosDetailsDto>();
+            CreateMap<User, UserDto>();
+            CreateMap<UserDto, User>();
+
             CreateMap<UserForUpdateDto, User>();
+            CreateMap<Photo, PhotosDetailsDto>();
             CreateMap<Photo, PhotoReturnDto>();
             CreateMap<PhotoCreationDto, Photo>();
+            CreateMap<Photo, PhotoDto>();
+            CreateMap<PhotoDto, Photo>();
+
             CreateMap<UserForRegisterDto, User>();
             CreateMap<MessageCreationDto, Message>().ReverseMap();
             CreateMap<Message, MessageReturnDto>();
@@ -39,6 +46,8 @@ namespace WebAPI.Helpers
                 //     .MapFrom(u => u.Sender.Photos.FirstOrDefault(p => p.IsMain).Url))
                 // .ForMember(m => m.RecipientPhotoUrl, opt => opt
                 //     .MapFrom(u => u.Recipient.Photos.FirstOrDefault(p => p.IsMain).Url));
+            CreateMap<Message, MessageDto>();
+            CreateMap<MessageDto, Message>();
         }
     }
 }
