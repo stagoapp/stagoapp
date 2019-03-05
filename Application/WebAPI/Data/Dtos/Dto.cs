@@ -7,6 +7,6 @@ namespace WebAPI.Data.Dtos
 {
     public class Dto
     {
-        
+        public int Id { get; set; } 
     }
 }

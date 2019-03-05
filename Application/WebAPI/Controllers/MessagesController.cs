@@ -16,7 +16,7 @@ namespace WebAPI.Controllers
     [Authorize]
     [Route("api/users/{userId}/[controller]")]
     [ApiController]
-    public class MessagesController : ControllerBase
+    public class MessagesController : EntityController<Message, MessageDto>
     {
         // private readonly IOrderRepository _repo;
         private readonly IEntityRepository<Message> _repo;
