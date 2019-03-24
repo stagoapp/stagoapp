@@ -1,7 +1,7 @@
 namespace WebAPI.Data.Models
 {
-    public class UserType
+    public class UserType : TypeModel
     {
-        public int Id { get; set; }
+        
     }
 }

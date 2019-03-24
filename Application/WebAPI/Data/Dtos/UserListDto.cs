@@ -2,7 +2,7 @@ using System;
 
 namespace WebAPI.Data.Dtos
 {
-    public class UserForListDto
+    public class UserListDto
     {
         public int Id { get; set; }
         public string Username { get; set; }

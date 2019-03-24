@@ -1,2 +1,2 @@
-export class Notfound.error {
+export class NotFoundError {
 }

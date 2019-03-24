@@ -16,12 +16,12 @@ namespace WebAPI.Controllers
     [Authorize]
     [Route("api/users/{userId}/[controller]")]
     [ApiController]
-    public class MessagesController : ControllerBase
+    public class MessagesController : EntityController<Message, MessageDto>
     {
         // private readonly IOrderRepository _repo;
-        private readonly IRepository<Message> _repo;
+        private readonly IEntityRepository<Message> _repo;
         private readonly IMapper _mapper;
-        public MessagesController(IRepository<Message> repo, IMapper mapper)
+        public MessagesController(IEntityRepository<Message> repo, IMapper mapper)
         {
             _mapper = mapper;
             _repo = repo;
@@ -73,7 +73,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateMessage(int userId, MessageForCreationDto messageForCreationDto)
+        public async Task<IActionResult> CreateMessage(int userId, MessageCreationDto messageForCreationDto)
         {
             var sender = await _repo.Get(userId);
 

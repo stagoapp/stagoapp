@@ -1,12 +1,11 @@
 using System;
-using System.Collections.Generic;
 using WebAPI.Data.Models;
 
-namespace WebAPI.Data.Models
+namespace WebAPI.Data.Dtos
 {
-    public class User : Entity
+    public class UserDto : Dto
     {
-        public int Status_Id { get; set; } 
+        public Status Status { get; set; } 
         public byte[] PasswordHash { get; set; }
         public byte[] PasswordSalt { get; set; }
         public string Username { get; set; }
@@ -23,6 +22,5 @@ namespace WebAPI.Data.Models
         public bool IsAdmin { get; set; }
         public DateTime DateOfBirth { get; set; }
         public DateTime DateLastActive { get; set; }
-        // ICollection
     }
 }

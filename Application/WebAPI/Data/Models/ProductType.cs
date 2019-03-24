@@ -1,7 +1,7 @@
 namespace WebAPI.Data.Models
 {
-    public class ProductType
+    public class ProductType : TypeModel
     {
-        public int Id { get; set; }
+        
     }
 }

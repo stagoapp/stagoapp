@@ -2,7 +2,7 @@ using System;
 
 namespace WebAPI.Data.Dtos
 {
-    public class PhotoForReturnDto
+    public class PhotoReturnDto
     {
         public int Id { get; set; }
         public string Url { get; set; }

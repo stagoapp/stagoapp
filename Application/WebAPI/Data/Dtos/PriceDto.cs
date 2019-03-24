@@ -1,12 +1,14 @@
-namespace WebAPI.Data.Models
+using WebAPI.Data.Models;
+
+namespace WebAPI.Data.Dtos
 {
-    public class Price : Entity
+    public class PriceDto : Dto
     {
-        public int Object_Id { get; set; }
-        public int EntityType_Id { get; set; }
-        public int Status_Id { get; set; } 
-        public int UnitType_Id { get; set; } 
-        public int SaleType_Id { get; set; } 
+        public Entity Object { get; set; }
+        public EntityType EntityType { get; set; }
+        public Status Status { get; set; } 
+        public UnitType UnitType { get; set; } 
+        public SaleType SaleType { get; set; } 
         public decimal PriceInitial { get; set; }
         public decimal PriceDelivery { get; set; }
         public decimal PriceInsurance { get; set; }

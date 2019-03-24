@@ -2,15 +2,15 @@ using System;
 using System.Collections.Generic;
 using WebAPI.Data.Models;
 
-namespace WebAPI.Data.Models
+namespace WebAPI.Data.Dtos
 {
-    public class Service : Entity
+    public class ServiceDto : Dto
     {
-        public int User_Id { get; set; } 
-        public int ServiceType_Id { get; set; }
-        public int Status_Id { get; set; } 
-        public int Check_Id { get; set; } 
-        public Guid PublicId { get; set;}
+        public User User { get; set; } 
+        public ServiceType ServiceType { get; set; }
+        public Status Status { get; set; } 
+        public Check Check { get; set; } 
+        public Guid PublicId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string Code { get; set; }

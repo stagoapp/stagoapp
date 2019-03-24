@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Query;
 
 namespace WebAPI.Data.Repositories
 {
-    public interface IRepository<T> where T : Entity
+    public interface IEntityRepository<T> where T : Entity
     {
         Task<T> Get(int id);
         Task<IEnumerable<T>> Get(Expression<Func<T, bool>> predicate);

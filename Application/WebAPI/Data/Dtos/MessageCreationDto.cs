@@ -2,13 +2,13 @@ using System;
 
 namespace WebAPI.Data.Dtos
 {
-    public class MessageForCreationDto
+    public class MessageCreationDto
     {
         public int SenderId { get; set; }
         public int RecipientId { get; set; }
         public DateTime MessageSent { get; set; }
         public string Content { get; set; }
-        public MessageForCreationDto()
+        public MessageCreationDto()
         {
             MessageSent = DateTime.Now;
         }

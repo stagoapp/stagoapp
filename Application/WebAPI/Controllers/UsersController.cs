@@ -16,12 +16,12 @@ namespace WebAPI.Controllers
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class UsersController : ControllerBase
+    public class UsersController : EntityController<User, UserDto>
     {
-        private readonly IRepository<User> _repo;
+        private readonly IEntityRepository<User> _repo;
         private readonly IMapper _mapper;
 
-        public UsersController(IRepository<User> repo, IMapper mapper)
+        public UsersController(IEntityRepository<User> repo, IMapper mapper)
         {
             _mapper = mapper;
             _repo = repo;
@@ -43,7 +43,7 @@ namespace WebAPI.Controllers
 
             var users = await _repo.Get();
 
-            var usersToReturn = _mapper.Map<IEnumerable<UserForListDto>>(users);
+            var usersToReturn = _mapper.Map<IEnumerable<UserListDto>>(users);
 
             // Response.AddPagination(users.CurrentPage, users.PageSize, users.TotalCount, users.TotalPages);
 
@@ -55,7 +55,7 @@ namespace WebAPI.Controllers
         {
             var user = await _repo.Get(id);
 
-            var userToReturn = _mapper.Map<UserForDetailedDto>(user);
+            var userToReturn = _mapper.Map<UserDetailsDto>(user);
 
             return Ok(userToReturn);
         }

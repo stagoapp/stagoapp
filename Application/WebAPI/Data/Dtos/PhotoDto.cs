@@ -1,14 +1,12 @@
-using System;
-using System.Collections.Generic;
 using WebAPI.Data.Models;
 
-namespace WebAPI.Data.Models
+namespace WebAPI.Data.Dtos
 {
-    public class Photo : Entity
+    public class PhotoDto : Dto
     {
-        public int Status_Id { get; set; } 
-        public int Object_Id { get; set; }
-        public int EntityType_Id { get; set; }
+        public Status Status{ get; set; } 
+        public Entity Object { get; set; }
+        public EntityType EntityType { get; set; }
         public int Index { get; set; }
         public string Url { get; set; }
         public string UrlPublic { get; set; }
