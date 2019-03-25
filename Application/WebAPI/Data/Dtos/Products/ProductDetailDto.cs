@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace WebAPI.Data.Dtos.Products
 {
-    public class ProductDetailDto
+    public class ProductsDetailDto
     {
         public int ProductType_Id { get; set; }
         public int User_Id { get; set; }
@@ -45,7 +45,7 @@ namespace WebAPI.Data.Dtos.Products
         public int ModifiedBy { get; set; }
     }
     
-    public class ProductUpdateDto: ProductDetailDto
+    public class ProductUpdateDto: ProductsDetailDto
     {
         public ProductUpdateDto()
         {
@@ -54,7 +54,7 @@ namespace WebAPI.Data.Dtos.Products
         }
     }
 
-    public class ProductCreateDto : ProductDetailDto
+    public class ProductCreateDto : ProductsDetailDto
     {
         public ProductCreateDto()
         {

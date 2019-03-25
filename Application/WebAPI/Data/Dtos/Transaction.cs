@@ -8,8 +8,8 @@ namespace WebAPI.Data.Dtos
         public User User { get; set; } 
         public Status Status { get; set; } 
         public OrderPackage OrderPackage { get; set; } 
-        public Contact ContactBilling { get; set; } 
-        public Contact ContactShipping { get; set; } 
+        public ContactDTO ContactBilling { get; set; } 
+        public ContactDTO ContactShipping { get; set; } 
         public decimal Price { get; set; } 
         public string Currency { get; set; } 
         public string DataKey { get; set; } 

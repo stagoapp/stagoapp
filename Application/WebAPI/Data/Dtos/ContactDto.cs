@@ -1,6 +1,8 @@
+using WebAPI.Data.Dtos;
+
 namespace WebAPI.Data.Models
 {
-    public class Contact : Entity
+    public class ContactDTO : Dto
     {
         public int User_Id { get; set; } 
         public int Status_Id { get; set; } 

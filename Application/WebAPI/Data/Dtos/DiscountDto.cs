@@ -1,8 +1,9 @@
 using System;
+using WebAPI.Data.Dtos;
 
 namespace WebAPI.Data.Models
 {
-    public class Discount : Entity
+    public class DiscountDto : Dto
     {
         public int User_Id { get; set; } 
         public int Status_Id { get; set; } 

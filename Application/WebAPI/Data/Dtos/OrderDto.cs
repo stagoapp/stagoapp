@@ -13,9 +13,9 @@ namespace WebAPI.Data.Dtos
         public OrderPackage OrderPackage{ get; set; }
         public User User { get; set; } 
         public User UserOffering { get; set; }
-        public Contact Contact { get; set; }
+        public ContactDTO Contact { get; set; }
         public Price Price { get; set; }
-        public Discount Discount { get; set; }
+        public DiscountDto Discount { get; set; }
         public Status Status { get; set; } 
         public Timeline Timeline { get; set; }
         public int Amount { get; set; }
