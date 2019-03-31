@@ -22,6 +22,6 @@ namespace WebAPI.Data.Dtos
         public string Material { get; set;}
         public string Code { get; set;}
         public string Category { get; set;}
-        public string Keywords { get; set;}
+        public ICollection<string> Keywords { get; set;}
     }
 }
