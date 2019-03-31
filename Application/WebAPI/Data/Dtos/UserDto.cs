@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using WebAPI.Data.Models;
 
 namespace WebAPI.Data.Dtos
@@ -22,5 +24,8 @@ namespace WebAPI.Data.Dtos
         public bool IsAdmin { get; set; }
         public DateTime DateOfBirth { get; set; }
         public DateTime DateLastActive { get; set; }
+        public ICollection<string> UserFavourites { get; set; }
+        public ICollection<string> UserSocialMedia { get; set; }
+        public ICollection<string> UserTypes { get; set; }
     }
 }

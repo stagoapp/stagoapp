@@ -1,8 +1,12 @@
 import { Entity } from './Entity';
 
 export interface Photo  extends Entity {
-    url: string;
-    description: string;
-    dateAdded: Date;
-    isMain: boolean;
+  status: string;
+  object: string;
+  entityType: string;
+  index: number;
+  url: string;
+  urlPublic: string;
+  description: string;
+  isMain: boolean;
 }
