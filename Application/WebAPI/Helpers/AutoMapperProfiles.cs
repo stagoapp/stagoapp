@@ -2,8 +2,6 @@ using System.Linq;
 using AutoMapper;
 using WebAPI.Data.Dtos;
 using WebAPI.Data.Models;
-using WebAPI.Data.Dtos;
-using WebAPI.Data.Models;
 
 namespace WebAPI.Helpers
 {
@@ -31,15 +29,15 @@ namespace WebAPI.Helpers
                 // });
             CreateMap<User, UserDto>();
             CreateMap<UserDto, User>();
-
+            CreateMap<UserForRegisterDto, User>();
             CreateMap<UserForUpdateDto, User>();
+
             CreateMap<Photo, PhotosDetailsDto>();
             CreateMap<Photo, PhotoReturnDto>();
             CreateMap<PhotoCreationDto, Photo>();
             CreateMap<Photo, PhotoDto>();
             CreateMap<PhotoDto, Photo>();
 
-            CreateMap<UserForRegisterDto, User>();
             CreateMap<MessageCreationDto, Message>().ReverseMap();
             CreateMap<Message, MessageReturnDto>();
                 // .ForMember(m => m.SenderPhotoUrl, opt => opt
@@ -48,6 +46,17 @@ namespace WebAPI.Helpers
                 //     .MapFrom(u => u.Recipient.Photos.FirstOrDefault(p => p.IsMain).Url));
             CreateMap<Message, MessageDto>();
             CreateMap<MessageDto, Message>();
+
+            CreateMap<Product, ProductDto>();
+            CreateMap<ProductDto, Product>();
+
+            CreateMap<Service, ServiceDto>();
+            CreateMap<ServiceDto, Service>();
+
+            CreateMap<Order, OrderDto>();
+            CreateMap<OrderDto, Order>();
+            CreateMap<OrderPackage, OrderPackageDto>();
+            CreateMap<OrderPackageDto, OrderPackage>();
         }
     }
 }
