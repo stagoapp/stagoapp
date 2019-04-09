@@ -5,7 +5,7 @@ namespace WebAPI.Data.Repositories
 {
     public interface IUnitOfWork : IDisposable
     {
-        DbContext Context { get;  }
+        DbContext Context { get; }
         void Commit();
     }
 }

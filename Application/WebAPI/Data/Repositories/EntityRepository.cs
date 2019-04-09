@@ -13,7 +13,6 @@ namespace WebAPI.Data.Repositories
 {
     public class EntityRepository<T> : IEntityRepository<T> where T : Entity
     {
-
         private readonly IUnitOfWork _unitOfWork;
 
         public EntityRepository(IUnitOfWork unitOfWork)
