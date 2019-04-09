@@ -15,8 +15,8 @@ namespace WebAPI.Services
         where D : Dto
     {
         Task<D> Get(int id);
-        Task<IEnumerable<D>> Get(Expression<Func<T, bool>> predicate);
-        Task<IEnumerable<D>> Get();
+        Task<IAsyncEnumerable<D>> Get(Expression<Func<T, bool>> predicate);
+        Task<IAsyncEnumerable<D>> Get();
         void Add(D entity);
         void Add(IEnumerable<D> entities);        
         void Update(D entity);        
