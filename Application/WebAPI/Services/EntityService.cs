@@ -32,7 +32,7 @@ namespace WebAPI.Services
             return _mapper.Map<D>(res);
         }
 
-        public async Task<IEnumerable<D>> Get(Expression<Func<T, bool>> predicate)
+        public async Task<IAsyncEnumerable<D>> Get(Expression<Func<T, bool>> predicate)
         {
             IEnumerable<T> inputs = await _repo.Get(predicate);
             List<D> results = new List<D>();
@@ -40,10 +40,10 @@ namespace WebAPI.Services
                 var res = _mapper.Map<D>(input);
                 results.Add(res);
             }
-            return results.AsEnumerable();
+            return results.ToAsyncEnumerable();
         }
 
-        public async Task<IEnumerable<D>> Get()
+        public async Task<IAsyncEnumerable<D>> Get()
         {
             IEnumerable<T> inputs = await _repo.Get();
             List<D> results = new List<D>();
@@ -51,7 +51,7 @@ namespace WebAPI.Services
                 var res = _mapper.Map<D>(input);
                 results.Add(res);
             }
-            return results.AsEnumerable();
+            return results.ToAsyncEnumerable();
         }
 
         public void Add(D entity)

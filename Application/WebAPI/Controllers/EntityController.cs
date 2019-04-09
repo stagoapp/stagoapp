@@ -20,66 +20,66 @@ namespace WebAPI.Controllers
         where T : Entity
         where D : Dto
     {
-        private readonly IEntityService<T, D> _service;
+        private readonly IEntityService<T, D> _serv;
 
         [HttpGet]
         public async Task<D> Get(int id)
         {
-            return await _service.Get(id);
+            return await _serv.Get(id);
         }
 
         [HttpGet]
-        public async Task<IEnumerable<D>> Get(Expression<Func<T, bool>> predicate)
+        public async Task<IAsyncEnumerable<D>> Get(Expression<Func<T, bool>> predicate)
         {
-            return await _service.Get(predicate);
+            return await _serv.Get(predicate);
         }
 
         [HttpGet]
-        public async Task<IEnumerable<D>> Get()
+        public async Task<IAsyncEnumerable<D>> Get()
         {
-            return await _service.Get();
+            return await _serv.Get();
         }
 
         [HttpPost]
         public void Add(D entity)
         {
-            _service.Add(entity);
+            _serv.Add(entity);
         }
 
         [HttpPost]
         public void Add(IEnumerable<D> entities)
         {
-            _service.Add(entities);
+            _serv.Add(entities);
         }
 
         [HttpPut]
         public void Update(D entity)
         {
-            _service.Update(entity);
+            _serv.Update(entity);
         }
 
         [HttpPut]
         public void Update(IEnumerable<D> entities)
         {
-            _service.Update(entities);
+            _serv.Update(entities);
         }
 
         [HttpDelete]
         public void Delete(D entity)
         {
-            _service.Delete(entity);
+            _serv.Delete(entity);
         }
 
         [HttpDelete]
         public void Delete(int id)
         {
-            _service.Delete(id);
+            _serv.Delete(id);
         }
 
         [HttpDelete]
         public void Delete(IEnumerable<D> entities)
         {
-            _service.Delete(entities);
+            _serv.Delete(entities);
         }
     }
 }
