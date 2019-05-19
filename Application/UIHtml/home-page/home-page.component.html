@@ -1,0 +1,154 @@
+
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Mobile Web-app fullscreen -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Meta tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="favicon.ico">
+
+  <!--Title-->
+  <title></title>
+
+  <!--CSS styles-->
+  <link rel="stylesheet" media="all" href="css/bootstrap.css">
+  <link rel="stylesheet" media="all" href="css/animate.css">
+  <link rel="stylesheet" media="all" href="css/font-awesome.css">
+  <link rel="stylesheet" media="all" href="css/furniture-icons.css">
+  <link rel="stylesheet" media="all" href="css/linear-icons.css">
+  <link rel="stylesheet" media="all" href="css/magnific-popup.css">
+  <link rel="stylesheet" media="all" href="css/owl.carousel.css">
+  <link rel="stylesheet" media="all" href="css/ion-range-slider.css">
+  <link rel="stylesheet" media="all" href="css/theme.css">
+
+  <!--Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&amp;subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+ 
+</head>
+
+<body>
+
+  <div class="page-loader"></div>
+
+  <div class="wrapper">
+
+      <!--Use class "navbar-fixed" or "navbar-default" -->
+      <!--If you use "navbar-fixed" it will be sticky menu on scroll (only for large screens)-->
+
+      <!-- ======================== Navigation ======================== -->
+
+    <nav class="navbar-fixed">
+
+        <div class="container">
+            <!--/navigation-top-->
+            <app-top-navbar/>
+            <!-- ==========  Main navigation ========== -->
+            <app-main-navbar/>
+            <!-- ==========  Search wrapper /not in detail pages========== -->
+            <app-searchbar/>
+            <!-- ==========  Login wrapper/if user didnt logged in /not in detail pages ========== -->
+            <app-sign-in-navbar/>
+            <!-- ==========  Cart wrapper/ user will see it on the top , with the summary of the items in cart ========== -->
+            <app-cart-navbar/>
+        </div> <!--/container-->
+    </nav>
+    <!-- ========================  Header content/do not show in detail pages ======================== -->
+    <app-header-slider/>
+    <!-- ========================  Icons slider /do not show in detail pages======================== -->    
+    <app-header-slider-icon/>
+    <!-- ========================  small Lists for any small list we need/homepage/do not show in detail pages ======================== -->
+
+    <section class="products">
+      <app-item-list-small/> <!--Deals  Check out our latest deals-->        
+    </section>
+
+    <section class="products">
+      <app-item-list-small/> <!--My Favourits -->      
+    </section>
+
+    <section class="products">
+      <app-item-list-small/> <!--My Reviews -->      
+    </section>
+
+    <section class="products">
+      <app-item-list-small/> <!--Popular categories -->      
+    </section>
+    
+     <!-- ========================  user register - user register /just show in register user page ======================== -->
+    <app-register/>
+    <!-- ========================  user detail - user/just show in user detail page ======================== -->
+    <app-user-detail/>
+
+     <!-- ========================  service detail - service/just show in service detail page ======================== -->
+     <app-service-detail/>
+
+    <!-- ========================  small Lists - link My Offering/do not show in detail pages ======================== -->
+
+    <section class="products">
+        <app-item-list-small/> <!--My services -->        
+    </section>
+
+    <section class="products">
+        <app-item-list-small/> <!--My Products -->      
+    </section>
+
+      <!-- ========================  Stretcher widget/ do not show in detail pages======================== -->
+
+      <section class="stretcher-wrapper">
+          <!-- === stretcher header === -->
+          <header class="hidden">
+              <!--remove class 'hidden'' to show section header -->
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-offset-2 col-md-8 text-center">
+                          <h1 class="h2 title">Popular categories</h1>
+                          <div class="text">
+                              <p>
+                                  Whether you are changing your home, or moving into a new one, you will find a huge selection of quality living room furniture,
+                                  bedroom furniture, dining room furniture and the best value at Furniture factory
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </header>
+          <!-- === stretcher === -->
+      </section>
+      <!-- ========================  Blog Block/ do not show in detail pages======================== -->
+      <app-blog-section/>
+
+      <!-- ========================  Banner/do not show in detail pages ======================== -->
+
+      <app-blog-banner/>
+    <!-- ========================  Blog/do not show in detail pages ======================== -->
+    <app-blog-section/>
+
+      <!-- ========================  Instagram/do not show in detail pages ======================== -->
+
+     <app-blog-section/>
+
+      <!-- ================== Footer  ================== -->
+
+      <app-footer/>
+
+  </div> <!--/wrapper-->
+
+  <!--JS files-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.bootstrap.js"></script>
+  <script src="js/jquery.magnific-popup.js"></script>
+  <script src="js/jquery.owl.carousel.js"></script>
+  <script src="js/jquery.ion.rangeSlider.js"></script>
+  <script src="js/jquery.isotope.pkgd.js"></script>
+  <script src="js/main.js"></script>
+
+
+</body></html>
