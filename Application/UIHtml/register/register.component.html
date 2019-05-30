@@ -42,13 +42,13 @@
 
                               <div class="col-md-12">
                                   <div class="form-group">
-                                      <input type="text" value="" class="form-control" placeholder="User ID">
+                                      <input type="text"  required name="username" [(ngModel)]="user.username" class="form-control" placeholder="User ID">
                                   </div>
                               </div>
 
                               <div class="col-md-12">
                                   <div class="form-group">
-                                      <input type="password" value="" class="form-control" placeholder="Password">
+                                      <input type="password" required name="password" [(ngModel)]="user.password" class="form-control" placeholder="Password">
                                   </div>
                               </div>
 
@@ -89,6 +89,17 @@
                               </div>
                             </div>
                          <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <p class="font-weight-bold">
+                                    Public Name:</p>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <input type="text" name="publicName" [(ngModel)]="user.publicName" class="form-control" placeholder="Public Name: *">
+                                </div>
+                            </div>
                              <div class="col-md-4">
                                   <div class="form-group">
                                     <p class="font-weight-bold">
@@ -97,7 +108,7 @@
                               </div>
                             <div class="col-md-8">
                                   <div class="form-group">
-                                      <input type="text" value="" class="form-control" placeholder="First name: *">
+                                      <input type="text" name="firstName" [(ngModel)]="user.contact.firstName" class="form-control" placeholder="First name: *">
                                   </div>
                               </div>
                              <div class="col-md-4">
@@ -108,7 +119,7 @@
                               </div>
                             <div class="col-md-8">
                                   <div class="form-group">
-                                      <input type="text" value="" class="form-control" placeholder="Last name: *">
+                                      <input type="text" name="lastName" [(ngModel)]="user.contact.lastName" class="form-control" placeholder="Last name: *">
                                   </div>
                               </div>
                              <div class="col-md-4">
@@ -119,10 +130,10 @@
                               </div>
                             <div class="col-md-8">
                                   <div class="form-group">
-                                      <input type="text" value="" class="form-control" placeholder="Email: *">
+                                      <input type="text" name="email" [(ngModel)]="user.contact.email" class="form-control" placeholder="Email: *">
                                   </div>
                               </div>
-                              <div class="col-md-4">
+                            <div class="col-md-4">
                                   <div class="form-group">
                                     <p class="font-weight-bold">
                                      Phone number:</p>
@@ -130,12 +141,23 @@
                               </div>
                             <div class="col-md-8">
                                   <div class="form-group">
-                                    <input type="text" value="" class="form-control" placeholder="Phone number:">
+                                    <input type="text" name="phone" [(ngModel)]="user.phone" class="form-control" placeholder="Phone number:">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                  <p class="font-weight-bold">
+                                   Additional Phone number:</p>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                    <div class="form-group">
+                                    <input type="text" name="additionalPhone" [(ngModel)]="user.contact.phoneAdditional" class="form-control" placeholder="Additional Phone number:">
                                 </div>
                             </div>
                             <hr>
                             
-                             <div class="col-md-12">
+                            <div class="col-md-12">
                                   
                                 <strong>Tell us what you do</strong>
                             </div>
@@ -212,7 +234,7 @@
                             <div class="col-md-12">
 
                                   <div class="form-group">
-                                    <textarea type="text" value="" class="form-control" placeholder="Short discription of your company:"></textarea>
+                                    <textarea type="text" name="biography" [(ngModel)]="user.biography" class="form-control" placeholder="Short discription of your company:"></textarea>
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -224,20 +246,43 @@
 <div class="col-md-12">
 
                                   <div class="form-group">
-                                    <input type="text" value="" class="form-control" placeholder="Address:">
+                                    <input type="text"  name="address" [(ngModel)]="user.contact.address" class="form-control" placeholder="Address:">
                                 </div>
                             </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input type="text"  name="unit" [(ngModel)]="user.contact.unit" class="form-control" placeholder="Unit: *">
+                                </div>
+                            </div>
+
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <input type="text" name="buzzer" [(ngModel)]="user.contact.buzzer" class="form-control" placeholder="Buzzer: *">
+                                </div>
+                            </div>
+
                               <div class="col-md-4">
                                   <div class="form-group">
-                                      <input type="text" value="" class="form-control" placeholder="Zip code: *">
+                                      <input type="text"  name="postalCode" [(ngModel)]="user.contact.postalCode" class="form-control" placeholder="Zip code: *">
                                   </div>
                               </div>
 
-                              <div class="col-md-8">
+                              <div class="col-md-4">
                                   <div class="form-group">
-                                      <input type="text" value="" class="form-control" placeholder="City: *">
+                                      <input type="text" name="city" [(ngModel)]="user.contact.city" class="form-control" placeholder="City: *">
                                   </div>
                               </div>
+                              <div class="col-md-4">
+                                    <div class="form-group">
+                                        <input type="text" name="province" [(ngModel)]="user.contact.province" class="form-control" placeholder="Province: *">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" name="country" [(ngModel)]="user.contact.country" class="form-control" placeholder="Country: *">
+                                        </div>
+                                </div>
                               <div class="col-md-12">
                                   <a href="#" class="btn btn-main btn-block">Submit</a>
                               </div>

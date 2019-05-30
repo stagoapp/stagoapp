@@ -1,18 +1,26 @@
 import { Photo } from './photo';
 import { Entity } from './Entity';
+import { Contact } from './contact';
 
 export interface User extends Entity {
-  username: string;
-  knownAs: string;
-  age: number;
-  gender: string;
-  created: Date;
-  lastActive: Date;
-  photoUrl: string;
-  city: string;
-  country: string;
-  interests?: string;
-  introduction?: string;
-  lookingFor?: string;
-  photos?: Photo[];
+    status: string;
+    password : string;
+    username : string;
+    publicName: string;
+    biography : string;
+    gender : string;
+    requesting : boolean;
+    offering : boolean;
+    points : number;
+    rating : number;
+    isActive : boolean;
+    isCorp : boolean;
+    isFeatured : boolean;
+    isAdmin : boolean;
+    dateOfBirth : Date;
+    dateLastActive : Date;
+    userFavourites :string[];
+    userSocialMedia :string[];
+    userTypes :string[];
+    contact: Contact;
 }
