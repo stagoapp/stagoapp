@@ -10,6 +10,7 @@ namespace WebAPI.Data.Dtos
         public Status Status { get; set; } 
         public byte[] PasswordHash { get; set; }
         public byte[] PasswordSalt { get; set; }
+        public string Password { get; set; }
         public string Username { get; set; }
         public string PublicName { get; set; }
         public string Biography { get; set; }
